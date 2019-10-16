@@ -17,11 +17,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<checkstyle.version>[8.25,)</checkstyle.version>
 		<checkstyle.plugin.version>3.1.0</checkstyle.plugin.version>
-		<sevntu.checkstyle.plugin.version>1.35.0</sevntu.checkstyle.plugin.version>
-		
-		<junit-jupiter.version>5.2.0</junit-jupiter.version>
-    	<junit-platform.version>1.2.0</junit-platform.version>
-	
+		<sevntu.checkstyle.plugin.version>1.35.0</sevntu.checkstyle.plugin.version>	
 	</properties>
 
 	<reporting>
@@ -71,7 +67,7 @@
 					<includeProjectDependencies>true</includeProjectDependencies>
 					<includePluginDependencies>true</includePluginDependencies>
 					<killAfter>-1</killAfter>
-					<mainClass>edu.bu.met.cs665.Main</mainClass>
+					<mainClass>src.main.java.app.Main</mainClass>
 					<cleanupDaemonThreads>false</cleanupDaemonThreads>
 				</configuration>
 			</plugin>
@@ -138,30 +134,7 @@
 					</execution>
 				</executions>
 			</plugin>
-		
-		<plugin>
-		    <groupId>org.apache.maven.plugins</groupId>
-		    <artifactId>maven-surefire-plugin</artifactId>
-		    <version>2.21.0</version>
-		    <configuration>
-                <includes>
-                	<include>${basedir}/src/test/java/*Test.java</include>
-                </includes>
-            </configuration>
-		    <dependencies>
-		        <dependency>
-		            <groupId>org.junit.platform</groupId>
-		            <artifactId>junit-platform-surefire-provider</artifactId>
-		            <version>1.2.0-M1</version>
-		        </dependency>
-		        <dependency>
-		            <groupId>org.junit.jupiter</groupId>
-		            <artifactId>junit-jupiter-engine</artifactId>
-		            <version>5.2.0-M1</version>
-		        </dependency>
-		    </dependencies>
-		</plugin>
-	</plugins>
+		</plugins>
 	</build>
 
 	<dependencies>
@@ -189,21 +162,6 @@
 		    <artifactId>derby</artifactId>
 		    <version>10.14.2.0</version>
 		</dependency>
-
-		<!-- https://mvnrepository.com/artifact/org.openjfx/javafx -->
-		<dependency>
-		  <groupId>org.openjfx</groupId>
-		  <artifactId>javafx</artifactId>
-		  <version>14-ea+1</version>
-		  <type>pom</type>
-		</dependency>
-		
-		<dependency>
-	        <groupId>org.junit.jupiter</groupId>
-	        <artifactId>junit-jupiter-engine</artifactId>
-	        <version>${junit-jupiter.version}</version>
-	        <scope>test</scope>
-    	</dependency>
 
 	</dependencies>
 </project>
