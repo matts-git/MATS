@@ -16,4 +16,4 @@ MATS requires JavaFX. All other dependencies are provided for in the POM.
 
 # Project Template
 
-This is a Java Maven Project Template.
+This is a Java Maven Project.
